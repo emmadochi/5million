@@ -209,6 +209,92 @@
         </div>
     </section>
 
+    <!-- Lead Form Section -->
+    <section class="lead" id="lead">
+        <div class="container">
+            <h2 class="section-title">Get Your Free Website Audit</h2>
+            <p class="lead-subtitle">Fill this quick form and receive a tailored mini-audit + recommendations.</p>
+
+            <form id="leadForm" class="lead-form" novalidate>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your best email address" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="phone">WhatsApp / Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="WhatsApp number (for report delivery)" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="brand">Business / Brand Name</label>
+                        <input type="text" id="brand" name="brand" placeholder="Your business or brand name" required>
+                    </div>
+
+                    <div class="form-field form-field-full">
+                        <label for="website">Website URL (optional)</label>
+                        <input type="url" id="website" name="website" placeholder="Paste your website link (if available)">
+                    </div>
+
+                    <div class="form-field">
+                        <label for="projectType">What Kind of Project Are You Interested In?</label>
+                        <select id="projectType" name="projectType" required>
+                            <option value="" selected disabled>Choose an option</option>
+                            <option>New Website Design</option>
+                            <option>Website Redesign</option>
+                            <option>Mobile App Development</option>
+                            <option>Web App / SaaS</option>
+                            <option>Not Sure Yet (Need Guidance)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="mainGoal">What’s Your Main Goal for This Project?</label>
+                        <select id="mainGoal" name="mainGoal" required>
+                            <option value="" selected disabled>Choose your goal</option>
+                            <option>Get more sales or clients online</option>
+                            <option>Build brand visibility</option>
+                            <option>Automate business processes</option>
+                            <option>Improve my current site performance</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="startTime">How Soon Do You Want to Start?</label>
+                        <select id="startTime" name="startTime" required>
+                            <option value="" selected disabled>Choose a timeline</option>
+                            <option>Immediately</option>
+                            <option>Within 1–2 Weeks</option>
+                            <option>Next Month</option>
+                            <option>Just exploring</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field form-field-full">
+                        <label for="notes">Additional Notes (optional)</label>
+                        <textarea id="notes" name="notes" rows="3" placeholder="Share context, challenges, or ideas…"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-consent">
+                    <label class="consent-label">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <span>I agree to receive my free website audit and occasional project tips from WebDev Pro. I can unsubscribe anytime.</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary lead-submit">Get My Free Audit Report →</button>
+                <p class="form-hint">By clicking the button, you agree to our communication policy.</p>
+            </form>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta" id="contact">
         <div class="container">
@@ -266,6 +352,31 @@
         </svg>
     </button>
 
+    <!-- WhatsApp CTA Floating Button -->
+    <button class="whatsapp-fab" aria-label="Chat on WhatsApp" id="waFab" title="Chat on WhatsApp">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M20.52 3.48A11.77 11.77 0 0012 0 12 12 0 000 12a11.77 11.77 0 003.48 8.52L2 24l3.6-1.44A12 12 0 0012 24a12 12 0 0012-12 11.77 11.77 0 00-3.48-8.52zM12 22a9.8 9.8 0 01-5-1.38L7 20l-2.5 1 1-2.4-.2-.2A9.8 9.8 0 012.2 12 9.8 9.8 0 0112 2.2 9.8 9.8 0 0121.8 12 9.8 9.8 0 0112 22zm5.2-7.3c-.3-.2-1.8-.9-2-1s-.5-.2-.7.2-.8 1-.9 1.1-.3.2-.6.1a7.43 7.43 0 01-2.2-1.4 8.35 8.35 0 01-1.5-1.8c-.2-.3 0-.4.1-.6s.3-.5.5-.7.2-.4 0-.6-1.1-1.3-1.5-1.8-.7-.4-.9-.3a2 2 0 00-.7.5 1.83 1.83 0 00-.6 1.4 3.21 3.21 0 00.7 1.7 11.56 11.56 0 004.3 4.3 3.84 3.84 0 002.3.7 2 2 0 001.4-.6 2.25 2.25 0 00.5-.7c.1-.2 0-.5-.1-.6z"/>
+        </svg>
+    </button>
+
+    <!-- WhatsApp CTA Popup -->
+    <div class="whatsapp-popup-overlay" id="waPopup" role="dialog" aria-modal="true" aria-labelledby="waTitle" aria-hidden="true">
+        <div class="whatsapp-popup">
+            <button class="whatsapp-close" id="waClose" aria-label="Close">×</button>
+            <h3 id="waTitle">Have a project in mind?</h3>
+            <p>Chat with me on WhatsApp. I usually reply within minutes.</p>
+            <div class="whatsapp-actions">
+                <a href="https://wa.me/2349042988676?text=Hi! I 09d like to discuss my project." target="_blank" rel="noopener noreferrer" class="btn-wa-primary" id="waChatBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M20.52 3.48A11.77 11.77 0 0012 0 12 12 0 000 12a11.77 11.77 0 003.48 8.52L2 24l3.6-1.44A12 12 0 0012 24a12 12 0 0012-12 11.77 11.77 0 00-3.48-8.52z"/>
+                    </svg>
+                    Chat on WhatsApp
+                </a>
+                <button class="btn-wa-secondary" id="waLaterBtn">Not now</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Mobile Menu Toggle
         const menuToggle = document.querySelector('.mobile-menu-toggle');
@@ -321,6 +432,143 @@
                 }
             });
         });
+    </script>
+    (function () {
+        const waPopup = document.getElementById('waPopup');
+        const waFab = document.getElementById('waFab');
+        const waClose = document.getElementById('waClose');
+        const waLaterBtn = document.getElementById('waLaterBtn');
+        const DISMISS_KEY = 'waPopupDismissedAt';
+
+        function isDismissedRecently() {
+            try {
+                const v = localStorage.getItem(DISMISS_KEY);
+                if (!v) return false;
+                const ts = parseInt(v, 10);
+                return Date.now() - ts < 24 * 60 * 60 * 1000; // 24h
+            } catch { return false; }
+        }
+
+        function openPopup() {
+            waPopup.classList.add('active');
+            waPopup.removeAttribute('aria-hidden');
+        }
+
+        function closePopup(setDismiss = true) {
+            waPopup.classList.remove('active');
+            waPopup.setAttribute('aria-hidden', 'true');
+            if (setDismiss) {
+                try { localStorage.setItem(DISMISS_KEY, String(Date.now())); } catch {}
+            }
+        }
+
+        // Auto-show after delay
+        if (!isDismissedRecently()) {
+            setTimeout(openPopup, 8000);
+            // Also show when user scrolls 40%
+            let shownOnScroll = false;
+            window.addEventListener('scroll', () => {
+                if (shownOnScroll || isDismissedRecently()) return;
+                const scrolled = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+                if (scrolled > 0.4) {
+                    openPopup();
+                    shownOnScroll = true;
+                }
+            }, { passive: true });
+        }
+
+        // FAB opens popup
+        waFab.addEventListener('click', () => openPopup());
+
+        // Close interactions
+        waClose.addEventListener('click', () => closePopup());
+        waLaterBtn.addEventListener('click', () => closePopup());
+        waPopup.addEventListener('click', (e) => {
+            if (e.target === waPopup) closePopup(false);
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closePopup(false);
+        });
+    })();
+    </script>
+    <script>
+        (function () {
+            // Existing script code above remains...
+
+            // Lead form handler → send to Google Sheets and open WhatsApp
+            const leadForm = document.getElementById('leadForm');
+            const formStatusId = 'leadStatusMsg';
+            let leadStatusEl = document.getElementById(formStatusId);
+            if (!leadStatusEl) {
+                leadStatusEl = document.createElement('p');
+                leadStatusEl.id = formStatusId;
+                leadStatusEl.style.marginTop = '0.75rem';
+                leadStatusEl.style.color = 'var(--text-light)';
+                const submitBtn = document.querySelector('.lead-submit');
+                if (submitBtn && submitBtn.parentElement) {
+                    submitBtn.parentElement.appendChild(leadStatusEl);
+                }
+            }
+
+            // 1) Replace with your deployed Apps Script Web App URL (exec)
+            const SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbz-F2Hx3U0CUTipotAW6_V5r_4yfpkor2viYTcs-N-OVgfbsgqeRwIr70RbRAoH2xZ_/exec';
+
+            if (leadForm) {
+                leadForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const fullName = document.getElementById('fullName').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const brand = document.getElementById('brand').value.trim();
+                    const website = document.getElementById('website').value.trim();
+                    const projectType = document.getElementById('projectType').value;
+                    const mainGoal = document.getElementById('mainGoal').value;
+                    const startTime = document.getElementById('startTime').value;
+                    const notes = document.getElementById('notes').value.trim();
+                    const consent = document.getElementById('consent').checked;
+
+                    if (!fullName || !email || !phone || !brand || !projectType || !mainGoal || !startTime || !consent) {
+                        alert('Please complete all required fields and agree to the consent.');
+                        return;
+                    }
+
+                    const record = {
+                        timestamp: new Date().toISOString(),
+                        fullName, email, phone, brand, website, projectType, mainGoal, startTime, notes
+                    };
+
+                    // Fire-and-forget submit to Google Sheets (avoids CORS blocking)
+                    try {
+                        fetch(SHEETS_ENDPOINT, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(record)
+                        }).catch(() => {});
+                        leadStatusEl.textContent = 'Saving your request... opening WhatsApp.';
+                    } catch (_) {
+                        leadStatusEl.textContent = 'Opening WhatsApp...';
+                    }
+
+                    // Open WhatsApp with prefilled message
+                    const lines = [
+                        `New Lead: Free Audit Request`,
+                        `Name: ${fullName}`,
+                        `Email: ${email}`,
+                        `WhatsApp/Phone: ${phone}`,
+                        `Brand: ${brand}`,
+                        website ? `Website: ${website}` : null,
+                        `Project Type: ${projectType}`,
+                        `Main Goal: ${mainGoal}`,
+                        `Start Timeline: ${startTime}`,
+                        notes ? `Notes: ${notes}` : null
+                    ].filter(Boolean);
+                    const text = encodeURIComponent(lines.join('\n'));
+                    const waUrl = `https://wa.me/2349042988676?text=${text}`;
+                    window.open(waUrl, '_blank');
+                });
+            }
+        })();
     </script>
 </body>
 </html>
